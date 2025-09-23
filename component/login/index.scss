@@ -1,0 +1,65 @@
+/* 外层容器：用于包含弹窗内容和关闭按钮 */
+	.popup-outer {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* 弹窗主体 */
+	.popup-body {
+		min-width: 200rpx;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* 关闭按钮：挂到弹窗外 */
+	.popup-close {
+		position: absolute;
+		bottom: -180rpx;
+		/* 挂出弹窗 */
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 50%;
+	}
+
+	.login-text {
+		margin-top: 20rpx;
+		font-size: 32rpx;
+		color: #333;
+	}
+	.wx-btn {
+		margin-top: 20rpx;
+		background-color: #07C160;
+		color: #fff;
+		border-radius: 50rpx;
+		padding: 20rpx 40rpx;
+	}
+	
+	.avatar-preview {
+		width: 120rpx;
+		height: 120rpx;
+		border-radius: 50%;
+		margin: 20rpx 0;
+	}
+	
+	.nickname-input {
+		width: 80%;
+		height: 80rpx;
+		line-height: 80rpx;
+		padding: 0 20rpx;
+		border: 1px solid #ddd;
+		border-radius: 12rpx;
+		font-size: 30rpx;
+		margin-top: 20rpx;
+	}
+	
+	.save-btn {
+		margin-top: 30rpx;
+		background: #07C160;
+		color: #fff;
+		padding: 20rpx;
+		border-radius: 40rpx;
+	}

@@ -1,0 +1,32 @@
+/* 外层容器：用于包含弹窗内容和关闭按钮 */
+	.popup-outer {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* 弹窗主体 */
+	.popup-body {
+		min-width: 200rpx;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* 关闭按钮：挂到弹窗外 */
+	.popup-close {
+		position: absolute;
+		bottom: -180rpx;
+		/* 挂出弹窗 */
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 50%;
+	}
+
+	.login-text {
+		margin-top: 20rpx;
+		font-size: 32rpx;
+		color: #333;
+	}

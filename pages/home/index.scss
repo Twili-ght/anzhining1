@@ -1,0 +1,86 @@
+.container {
+    background-color: #f5f7fa;
+}
+.car-image {
+    width: 100%;
+		height: 100%;
+}
+.banner-image {
+    width: 100%;
+    height: 300rpx;
+    border-radius: 16rpx;
+    margin-top: 20rpx;
+    object-fit: cover;
+		padding-left: 17rpx;
+}
+
+	.function-area {
+		background-color: #ffffff;
+		border-radius: 16rpx;
+		padding: 30rpx;
+		margin-bottom: 40rpx;
+	}
+
+	.function-row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 40rpx;
+	}
+
+	.function-row:last-child {
+		margin-bottom: 0;
+	}
+
+	.function-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 25%;
+	}
+
+	.function-icon {
+		width: 80rpx;
+		height: 80rpx;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10rpx;
+	}
+
+	.function-text {
+		font-size: 24rpx;
+		color: #333;
+	}
+
+	.bg-green {
+		background-color: #19be6b;
+	}
+
+	.bg-orange {
+		background-color: #ff9900;
+	}
+
+	.bg-blue {
+		background-color: #2979ff;
+	}
+
+	.bg-purple {
+		background-color: #1cbbb4;
+	}
+
+	.bg-cyan {
+		background-color: #1cbbb4;
+	}
+
+	.bg-blue-light {
+		background-color: #39b9ff;
+	}
+
+	.bg-green-light {
+		background-color: #39c57a;
+	}
+
+	.bg-blue-dark {
+		background-color: #3471ED;
+	}

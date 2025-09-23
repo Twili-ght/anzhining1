@@ -1,0 +1,1 @@
+{"bsonType":"object","required":["name","age","phone","openid"],"permission":{"read":true,"create":true,"update":true,"delete":true},"properties":{"_id":{"description":"ID，系统自动生成"},"name":{"description":"姓名"},"age":{"description":"年龄"},"phone":{"description":"电话"},"openid":{"description":"微信id"}}}
