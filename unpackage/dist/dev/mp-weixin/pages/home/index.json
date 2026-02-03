@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "u-icon": "../../uni_modules/uview-plus/components/u-icon/u-icon"
+  }
+}

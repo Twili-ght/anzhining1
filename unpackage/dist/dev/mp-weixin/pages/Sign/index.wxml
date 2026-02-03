@@ -1,0 +1,1 @@
+<view class="sigin-content"><view class="top-content"><image class="bg" src="{{a}}" mode="aspectFill" lazy-load/><label class="sigin-date">{{b}}</label></view></view>

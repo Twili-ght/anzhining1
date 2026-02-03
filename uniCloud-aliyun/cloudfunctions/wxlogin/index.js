@@ -50,7 +50,7 @@ exports.main = async (event, context) => {
 		await userCollection.add({
 			openid: body.openid,
 			session_key: body.session_key,
-			nickname: userInfo.nickName || '',
+			nicknNme: userInfo.nicknNme || '',
 			avatar: userInfo.avatarUrl || '',
 			gender: userInfo.gender || 0,
 			create_time: Date.now(),
@@ -58,19 +58,29 @@ exports.main = async (event, context) => {
 	} else {
 		// 老用户更新
 		await userCollection.doc(userInDB.data[0]._id).update({
-			nickname: userInfo.nickName || '',
+			nicknNme: userInfo.nickName || '',
 			avatar: userInfo.avatarUrl || '',
 			gender: userInfo.gender || 0,
 			update_time: Date.now(),
 		})
 	}
-
-	return {
-		code: 0,
-		msg: '登录成功',
-		data: {
-			openid: body.openid,
-			userInfo
-		},
+	if (code === 0) {
+		return {
+			code: 0,
+			msg: '登录成功',
+			data: {
+				openid: body.openid,
+				userInfo
+			},
+		}
+	} else {
+		return {
+			code: -1,
+			data: {
+				msg: '登录失败'
+			}
+		}
 	}
+
+
 }

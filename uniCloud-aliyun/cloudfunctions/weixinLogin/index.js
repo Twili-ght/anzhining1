@@ -1,10 +1,17 @@
 'use strict';
+const {
+	WX_APPID,
+	WX_SECRET
+} = require('./local.env.json');
+
 exports.main = async (event, context) => {
 	const {
 		code,
 		avatar,
-		nickname
+		nickname,
+		grade
 	} = event;
+	console.log('接收到的参数:', event);
 	if (!code) {
 		return {
 			code: 1,
@@ -12,8 +19,8 @@ exports.main = async (event, context) => {
 		}
 	}
 
-	const appid = 'wx9755c30eeb917cf9';
-	const secret = '334752ae93aa90b23c5eb724bce1975c';
+	const appid = WX_APPID;
+	const secret = WX_SECRET;
 
 	// 调用微信接口换取 openid
 	const res = await uniCloud.httpclient.request(
@@ -49,11 +56,12 @@ exports.main = async (event, context) => {
 
 	if (userInDB.data.length === 0) {
 		// 新用户，插入数据
-		await userCollection.add({
+		const addres = await userCollection.add({
 			openid: body.openid,
 			session_key: body.session_key,
 			avatar: avatar,
 			nickname: nickname,
+			grade: grade,
 			create_time: Date.now()
 
 		});
@@ -63,13 +71,15 @@ exports.main = async (event, context) => {
 			session_key: body.session_key,
 			avatar: avatar || userInDB.data[0].avatar,
 			nickname: nickname || userInDB.data[0].nickname,
+			grade: grade !== undefined ? grade : userInDB.data[0].grade,
 			update_time: Date.now()
 		});
 	}
 	// 返回给前端
 	const userInfo = {
 		avatar: avatar,
-		nickname: nickname
+		nickname: nickname,
+		grade: grade,
 	};
 	return {
 		code: 0,
@@ -78,7 +88,8 @@ exports.main = async (event, context) => {
 			openid: body.openid,
 			userInfo: {
 				avatar,
-				nickname
+				nickname,
+				grade,
 			}
 		}
 	};

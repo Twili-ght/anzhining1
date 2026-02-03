@@ -1,7 +1,7 @@
 {
-  "name": "login",
-  "dependencies": {},
-  "extensions": {
-    "uni-cloud-jql": {}
-  }
+	"name": "wxlogin",
+	"dependencies": {},
+	"extensions": {
+		"uni-cloud-jql": {}
+	}
 }

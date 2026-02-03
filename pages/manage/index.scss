@@ -1,0 +1,85 @@
+.content {
+		padding: 15px;
+	}
+
+	.u-demo-block {
+		&__title {
+			font-size: 14px;
+			color: #666;
+			margin-bottom: 10px;
+		}
+
+		&__content {
+			border-radius: 4px;
+		}
+	}
+
+	.footer-box {
+		position: fixed;
+		bottom: 90rpx;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		left: 0rpx;
+	}
+
+	.popup-content {
+		width: 80vw;
+		height: 23vh;
+		border-radius: 20rpx;
+		padding: 30rpx;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background: linear-gradient(135deg, #c7f0f7 0%, #d8f3fa 100%);
+	}
+
+	.popup-grade {
+		border: 2rpx solid #7ec8e3;
+		height: 60rpx;
+		border-radius: 60rpx;
+		margin-bottom: 40rpx;
+	}
+
+	.wechatname {
+		border: 2rpx solid #7ec8e3;
+		height: 60rpx;
+		border-radius: 60rpx;
+
+
+		&::placeholder {
+			line-height: 15rpx;
+			// left: 25rpx;
+		}
+
+		.wechatname:focus {
+			border: 2rpx solid #3aa9d1;
+		}
+	}
+	/* 表头 */
+	.table-header,
+	.table-row {
+		display: flex;
+		align-items: center;
+		padding: 20rpx 0;
+		border-bottom: 1px solid #eee;
+	}
+	
+	.table-header {
+		font-weight: bold;
+		background: #f7f7f7;
+	}
+	
+	/* 单元格 */
+	.cell {
+		flex: 1;
+		font-size: 28rpx;
+	}
+	
+	.name {
+		flex: 1.2;
+	}
+	
+	.grade {
+		flex: 0.8;
+	}

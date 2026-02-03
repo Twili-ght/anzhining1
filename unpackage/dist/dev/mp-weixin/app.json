@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/mine/index",
+    "pages/manage/manage",
+    "pages/Sign/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "abac",
+    "navigationBarBackgroundColor": "#Ff6700",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "custom": true,
+    "backgroundColor": "white",
+    "color": "black",
+    "selectedColor": "#3471ED",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "/static/首页 (1).png",
+        "selectedIconPath": "/static/首页.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "/static/我的 (1).png",
+        "selectedIconPath": "/static/我的.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于获取用户当前位置"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+  "usingComponents": {}
+}

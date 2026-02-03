@@ -1,8 +1,8 @@
 <template>
 	<view class="container">
 		<!-- 在线课程卡片 -->
-		<view car-car-image>
-			<image src="../../static/卡片1.png" mode="aspectFill" class="banner-image"></image>
+		<view class="car-image">
+			<image src="../../static/卡片.png" mode="aspectFill" class="banner-image"></image>
 		</view>
 
 		<!-- 功能图标区域 -->
@@ -60,6 +60,9 @@
 					<text class="function-text">课后点评</text>
 				</view>
 			</view>
+		</view>
+		<view class="WeChat-Pay">
+			<image src="../../static/WeChat-Pay.png" mode="widthFix" class="WeChat-image"></image>
 		</view>
 	</view>
 </template>

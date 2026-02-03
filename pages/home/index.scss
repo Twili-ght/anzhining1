@@ -1,5 +1,5 @@
 .container {
-    background-color: #f5f7fa;
+    background-color: #ffffff;
 }
 .car-image {
     width: 100%;
@@ -15,7 +15,6 @@
 }
 
 	.function-area {
-		background-color: #ffffff;
 		border-radius: 16rpx;
 		padding: 30rpx;
 		margin-bottom: 40rpx;
@@ -83,4 +82,16 @@
 
 	.bg-blue-dark {
 		background-color: #3471ED;
+	}
+	.WeChat-Pay {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.WeChat-image {
+		width: 50%;     
+		height: auto; 
+		border-radius: 16rpx;
 	}
